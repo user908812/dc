@@ -1,0 +1,138 @@
+:root {
+    --CARD_WIDTH: 380px;
+    --CARD_HEIGHT: 770px;
+    --ANIM_DISTANCE: -8300px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    background-color: black;
+}
+main {
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    will-change: transform;
+    margin-left: -500px;
+}
+.cards {
+    margin-left: 500px;
+    margin-top: 60px;
+    display: grid;
+}
+@media (max-width: 421px) {
+    .card {
+        width: var(--CARD_WIDTH);
+        height: var(--CARD_HEIGHT);
+    }
+}
+.card {
+    z-index: 1;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+.top {
+    width: 100%;
+    height: 300px;
+    background-color: #1d1d1d;
+}
+.hexagon-items {
+    text-align: center;
+    color: #fefdfc;
+}
+.hexagon-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+}
+.hexagon {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+}
+.hexagon-top-title {
+    z-index: 1;
+    position: relative;
+    top: 85px;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+.hexagon-middle-title {
+    z-index: 1;
+    position: relative;
+    top: 88px;
+    font-size: 35px;
+    font-weight: 500;
+    text-shadow: 2px 2px 2px #000;
+}
+.hexagon-bottom-title {
+    z-index: 1;
+    position: relative;
+    top: 95px;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+.title-container {
+    width: 100%;
+    height: 70px;
+    background-color: #dedfdc;
+}
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
+.description {
+    width: 100%;
+    height: 400px;
+    background-color: #666460;
+}
+.description-text {
+    z-index: 0;
+    margin-left: 5px;
+    padding-top: 10px;
+    color: #dddddd;
+    text-align: center;
+}
+.description-image-container {
+    display: flex;
+    justify-content: center;
+}
+.description-image {
+    z-index: 1;
+    position: absolute;
+    top: 495px;
+    width: 250px;
+    height: 250px;
+}
+#toggle-animation-button {
+    color: black;
+    background: black;
+    border: none;
+    width: 100vh;
+    height: 80px;
+    text-align: center;
+}
+@media (min-width: 1900px) {
+    .card {
+        width: 380px;
+    }
+}
+
+@keyframes cardAnimation {
+    0% {
+        transform: translateX(1000px);
+    }
+    100% {
+        transform: translateX(-8300px);
+    }
+}
